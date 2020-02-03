@@ -1,8 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Hacktronics</title>
 
-  <body>
-  <% include extras/header.ejs %>
-  
-  </body>
-  </html>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./stylesheet/style.css" />
+</head>
+
+<body>
+  <header id="1link">
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+        <img src="../assets/hacklogo.jpg" alt="hacklogo" class="hacklogo">
+          Hacktronics</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#1link">HOME
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#2link">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:void(0);" id="mpopupLink">Contact Us</a>
+              <div id="mpopupBox" class="mpopup">
+                <div class="mpopup-content">
+                    <div class="mpopup-head">
+                        <span class="close">×</span>
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="mpopup-main">
+                      <div class="container">
+                        <form action="abc.php" method="POST" enctype="text/plain">
+                          <label for="fname">Full Namae</label>
+                          <input type="text" id="fname" name="fullname" placeholder="Your name.." required>
+                          <label for="email">Email</label>
+                          <input type="email" id="email" name="email" placeholder="xyz@domain.com" required>
+                          <label for="number">Mobile Number</label>
+                          <input type="number" id="number" name="number" placeholder="xxxxxxxxxx">
+                          <label for="subject">Subject</label>
+                          <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px" required></textarea>
+                          <div class="mpopup-foot">
+                            <input type="submit" value="Send">
+                        </div>
+                        </form>
+                      </div>
+                </div>
+                </div>
+            </div>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="dropdown">
+                <a href="#" class="nav-link"> Our Team</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login/SignUp</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="modal fade" id="modalLRForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog cascading-modal" role="document">
+        <!--Content-->
+        <div class="modal-content">
+    
+          <!--Modal cascading tabs-->
+          <div class="modal-c-tabs">
+    
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
+                  Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+                  Register</a>
+              </li>
+            </ul>
+    
+            <!-- Tab panels -->
+            <div class="tab-content">
+              <!--Panel 7-->
+              <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+    
+                <!--Body-->
+                <div class="modal-body mb-1">
+                    <div class="modal-body">
+                        <div class="form-group">
+                          <label for="email1">Email address</label>
+                          <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
+                          <small id="emailHelp" class="form-text text-muted"  ></small>
+                        </div>
+                        <div class="form-group">
+                          <label for="password1">Password</label>
+                          <input type="password" class="form-control" id="password1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                          <label for="password1">Confirm Password</label>
+                          <input type="password" class="form-control" id="password2" placeholder="Confirm Password">
+                        </div>
+                      </div>
+                      <div class="modal-footer border-top-0 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                      </div>
+                    </form>
+                </div>
+                <!--Footer-->
+               
+    
+              </div>
+              <!--/.Panel 7-->
+    
+              <!--Panel 8-->
+              <div class="tab-pane fade" id="panel8" role="tabpanel">
+    
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="modal-body">
+                        <div class="form-group">
+                          <label for="email1">Email address</label>
+                          <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
+                          <small id="emailHelp" class="form-text text-muted"></small>
+                        </div>
+                        <div class="form-group">
+                          <label for="password1">Password</label>
+                          <input type="password" class="form-control" id="password1" placeholder="Password">
+                        </div>
+                        
+                      </div>
+                      <div class="modal-footer border-top-0 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                      </div>
+                    </form>
+    
+                </div>
+                <!--Footer-->
+              
+              </div>
+              <!--/.Panel 8-->
+            </div>
+    
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+    <!--Modal: Login / Register Form-->
+    
+    
+    <!--Modal: Login / Register Form-->
+    
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-7 col-sm-12  text-white">
+          <h6>IIIT Una in collaboration with IIT Mandi Presents</h6>
+          <h1>HACKTRONICS<h6>2020</h6></h1>
+          <h6>HARDWARE HACKATHON</h6>
+          <p><h2>
+            Prize Worth</br></h2>
+            <h3>INR 50,000 and Much More</h3>
+          </p>
+          <h5 id="days"></h5>
+          <h5 id="hours"></h5>
+          <h5 id="mins"></h5>
+          <h5 id="secs"></h5>
+          <h2 id="end"></h2>
+          <button class="btn btn-light px-5 py-2 primary-btn">
+            Team Registration 
+          </button>
+
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="section-1" id="2link"> 
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6 col-12">
+            <div class="pray">
+              <img src="../assets/Quote.png" alt="Quote" class="" />
+            </div>
+          </div>
+          <div class="col-md-6 col-12">
+            <div class="panel text-left">
+              <h1>WHAT IS HACKTRONICS?</h1>
+                <p>
+                  Electronics Association Aavesh have decided to organize Hacktronics, a hardware hackathon where students can participate in
+                   teams to design and build some innovative hardware over a period of two days. This event would 
+                   be new to the state of Himachal Pradesh itself and will help to set a new level of healthy 
+                   competitive fervor. 
+                   <a href="#" class="more-link" >More</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+    <section class="section-2 container-fluid p-0" id="3link">
+      <div class="cover">
+        <div class="overlay"></div>
+        <div class="content text-center">
+          <h1>About Collaboration</h1>
+          <p>
+            The Hacktronics 2020 event will be organized by IIIT Una with the collaboration of IEEE Student Branch Chapter IIT Mandi.
+          </p>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+        <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+          <a href="http://www.iiitu.ac.in/" target="_balnk">
+          <div class="rect">
+            <img src="../assets/clogo.png" alt="iiituna" class="minilogo">
+          </div></a>
+          <a href="https://aavesh-iiitu.github.io/" target="_blank">
+          <div class="rect">
+            <img src="../assets/AAVESH.jpg" alt="aavesh" class="minilogo">
+          </div></a>
+          <a href="http://www.iitmandi.ac.in/" target="_balnk">
+          <div class="rect">
+            <img src="../assets/iitm.png" alt="iitm" class="minilogo">
+          </div></a>
+          <a href="https://ieee.iitmandi.ac.in/" target="_balnk">
+            <div class="rect">
+            <img src="../assets/ieee_logo.png" alt="ieeem" class="minilogo">
+          </div></a>
+        </div>
+      </div>
+
+
+      <div class="purchase text-center">
+        <h1>Participants Section</h1>
+        <p><pre>“Wiseman participates, others are just observers”
+                                                    -Santosh Avvannavar
+        </pre>
+        </p>
+        <div class="cards">
+          <div class="d-flex flex-row justify-content-center flex-wrap">
+            <div class="card">
+              <div class="card-body text-left">
+                <div class="title">
+                  <h5 class="card-title">ELIGIBILITY CRITERIA</h5>
+                </div>
+                <p class="card-text">
+                  <li>This innovation platform is open for all the students of
+                    undergraduate, postgraduate and PhD courses.
+                    <li>Students from Science, Engineering, Design or Management
+                    institutes from all across India can participate.</li>
+                   <li>Students can participate either as individual or as team of
+                    maximum four members.</li>
+                    <li>
+                     team configuration is restricted to participants from same
+                    college/institution.</li>
+                </p>
+
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body text-left">
+                <div class="title">
+                  <h5 class="card-title">RULES</h5>
+                </div>
+                <p class="card-text">
+                  <li>Participants should go through the event rules and adhere to the
+                    specifics.</li>
+                    <li> The participants must arrange for their own hardware and
+                    software components/devices/peripherals/designing kits. The
+                    organizers will not be responsible for unavailability of any
+                    component required.</li>
+                    <li>The participants will be provided only with power outlets, basic
+                    kits and with a place to set-up and build their project at the
+                    decided venue.</li>
+                    <li> participants shall accept the judgment of the organizers at
+                    any stage of the event.</li>
+                    <li>The organizers reserve the right to dismiss any project/team on
+                    grounds of misconduct.</li>
+                </p>
+            </div>
+            </div>
+            <div class="card">
+              <div class="card-body text-left">
+                <div class="title">
+                  <h5 class="card-title">REGISTRATION PROCESS</h5>
+                </div>
+                <p class="card-text">
+                  <li>The registration needs to be done online at the Hacktronics
+                  website, once released.</li>
+                  <li>participants are expected to register and form teams on the
+                  registration portal.</li>
+                  <li> will be required to furnish basic personal and contact
+                  details.</li>
+                  <li>Participants will be required to upload an abstract of their project
+                  which should be in the format as displayed on the website.</li>
+                  <li>One team will be allowed to submit only one abstract.</li>
+                  <li>teams will be shortlisted on the basis of their uploaded
+                  abstract.</li>
+                  <li>teams need be present at the decided venue for further
+                  rounds.</li>
+                </p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-3 container-fluid p-0 text-center" id="4link">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <h1>AWARDS AND CERTIFICATES</h1>
+          <p>
+            Top teams will be awarded with cash prize worth INR 50,000 and certificate of
+            excellence.
+            Participation certificates will be given to all the participants.
+            Disqualified teams will not be considered for any certificates.
+            The certificates will have to be collected immediately after the
+            event and will not be delivered to any participant later.
+          </p>
+        </div>
+      </div>
+      <div class="platform row">
+        <div class="col-md-6 col-sm-12 text-right">
+          <button class="btn btn-light px-5 py-2 primary-btn">
+            Register Now
+          </button>
+        </div>
+        <div class="col-md-6 col-sm-12 text-left">
+          <button class="btn btn-light px-5 py-2 primary-btn">
+            Login
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section-4" id="5link">
+      <div class="container text-center">
+        <h1 class="text-dark">OUR CHIEF GUEST</h1>
+        <p class="text-secondary">"Every Thought You Produce,anything you say,any action you do,<br>it bears your signature"</p>
+      </div>
+      <div class="team row ">
+        <div class="col-md-4 col-12 text-center">
+            <div class="card mr-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                  <img src="../assets/iiitudir.jpg" class="img-fluid border-radius p-4" alt="">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Prof. S. Selvakumar</h3>
+                  <p class="card-text">
+
+
+
+                  </p>
+                  <a href="https://www.facebook.com/selvakumar.subramanian.35" class="fa fa-facebook"></a>
+                  <a href="#" class="fa fa-twitter"></a>
+                  <p class="text-black-50">Director IIIT Una</p>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-12">
+            <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+                <div class="carousel-inner text-center">
+                  <div class="carousel-item active">
+                    <div class="card mr-2 d-inline-block shadow">
+                      <div class="card-img-top">
+                        <img src="../assets/" class="img-fluid rounded-circle w-50 p-4" alt="">
+                      </div>
+                      <div class="card-body">
+                        <h3 class="card-title">Chief Guest2</h3>
+                        <p class="card-text">
+
+
+                        </p>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <p class="text-black-50">Prof. at IIsc bangalore</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card  d-inline-block mr-2 shadow">
+                      <div class="card-img-top">
+                        <img src="../assets/" class="img-fluid rounded-circle w-50 p-4" alt="">
+                      </div>
+                      <div class="card-body">
+                        <h3 class="card-title">Chief Guest3</h3>
+                        <p class="card-text">
+                          
+
+                        </p>
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <p class="text-black-50">Designation</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        </div>
+        <div class="col-md-4 col-12 text-center">
+            <div class="card mr-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                  <img src="../assets/director.jpg" class="img-fluid border-radius p-4" alt="">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Timothy A. Gonsalves</h3>
+                  <p class="card-text">
+                    
+
+                    </p>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                  <p class="text-black-50">Director IIT Mandi</p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="6link">
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About us</h4>
+          <p class="text-muted">We are from team Aavesh. Aavesh is an electronics society that strives to teach and help students acquire new skills in an era of rapidly evolving technology in the field of electronics and communication engineering. The Society aims to provide potential minds of IIITU a platform to discuss innovative ideas and nurture their skills to tackle real life challenges in the world today and contribute to the technical society through various projects, patents and research publications.</p>
+          <p class="pt-4 text-muted">Copyright ©2019 All rights reserved | This Website is made by
+            <a href="https://aavesh-iiitu.github.io/"><span> Team Aavesh</span></a>
+          </p>
+        </div>
+        <div class="col-md-3 col-sm-12 contactus">
+        <h3>Contact Us</h3>
+          <p class="text-muted">Aman Saxena</p>
+          <div class="contact">
+          <p class="text-muted">President
+            (Aavesh Association)</br>
+            +91-8894973403</p>
+            <p class="text-muted">Aakash Gupta</p>
+            <div class="contact">
+            <p class="text-muted">Coordinator
+              (Aavesh Association)</br>
+              +91-9761560015</p>
+            </div>
+        </div>
+      </div>
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+            <a href="https://www.facebook.com/TeamAAVESH"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/aavesh-iiitu/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Aavesh-IIITU"><i class="fab fa-github"></i></a>
+          </div></br>
+          <img src="../assets/event.jpg" alt="event" class="collabimg">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="./javascript/main.js"></script>
+          
+</body>
+
+</html>

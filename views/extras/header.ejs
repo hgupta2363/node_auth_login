@@ -28,17 +28,24 @@
          
          
         </li>
+       <%if(email){%>
         <li><a href="/user/logout">logout</a></li>
-        
+       <%}%>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+     <%if(!email){%>
+
         <li><a href="/user/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="/user/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       <%}%>
+       <li>hii <%=email%> </li>
       </ul>
     </div>
   </div>
 </nav>
 
+<div>
 
+</div>
 </body>
 </html>

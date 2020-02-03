@@ -22,6 +22,13 @@ require:true
     date: {
         type: Date,
         default: Date.now
+      },
+      secretKey:{
+          type:String,
+
+      },
+      active:{
+          type:Boolean
       }
 })
 module.exports=mongoose.model("user",userSchema)

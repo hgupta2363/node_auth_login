@@ -26,11 +26,15 @@
       integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
       crossorigin="anonymous"
     ></script>
+  
+  <div class="container">
 <div class="row mt-5">
     <div class="col-md-3 m-auto">
       <div class="card card-body">
         <h1 class="text-center mb-3"><i class="fas fa-sign-in-alt"></i>  Login</h1>
+        <div class="message">
         <% include ./extras/massege%>
+      </div>
         <form action="/user/login" method="POST">
           <div class="form-group">
             <label for="email">Email</label>
@@ -60,6 +64,23 @@
       </div>
     </div>
   </div>
+</div>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+</script>
+<script
+src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  
+  setTimeout(function(){
+    
+    $(".message").css("display","none")
+   }, 2000);
+  </script>
 </body>
   </html>
   © 2019 GitHub, Inc.

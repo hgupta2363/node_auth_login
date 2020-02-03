@@ -26,8 +26,11 @@ mongoose.connect('mongodb://localhost:27017/tes').then((db,err)=>
 // view engine setup
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-
-
+app.use(express.static(path.join(__dirname,"public")))
+app.use((req,res,next)=>{
+  console.log(req.url)
+  next();
+})
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser('12345-67890-09876-54321'));
@@ -37,14 +40,18 @@ app.use(session({ cookie: { maxAge: 60000 },
   resave: false, 
   saveUninitialized: false}));
 
-app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(flash());
  app.use(function(req, res, next) {
+ 
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
-  console.log("rahul")
-  console.log(typeof indexRouter)
+  res.locals.email=req.signedCookies.email;
+  res.locals.flag=req.flash('flagverify');
+  res.locals.email_error=JSON.stringify(req.flash('email_error'))
+  console.log("test")
+  console.log(typeof(res.locals.email_error))
   next();
 });
 

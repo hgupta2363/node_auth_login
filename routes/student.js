@@ -11,6 +11,7 @@ var User=require("../models/db")
     //res.redirect("/user/login")
 //}
 router.get("/dashboard",(req,res,next)=>{
+ 
     if(req.signedCookies.email){
         console.log(req.signedCookies.email)
         User.findOne({email:req.signedCookies.email}).then((user,err)=>{
