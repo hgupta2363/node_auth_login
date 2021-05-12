@@ -20,7 +20,7 @@
     "jquery": "^3.4.1",
     "mongoose": "^5.6.3",
     "morgan": "~1.9.1",
-    "nodemailer": "^6.4.2",
+    "nodemailer": "^6.4.16",
     "randomstring": "^1.1.5",
     "session": "^0.1.0",
     "session-file-store": "^1.2.0"
